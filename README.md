@@ -1,142 +1,66 @@
-body {
-  font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: #eeeeeecb;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
-  color: #333;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.main-nav {
-  background-color: #333;
-  padding: 10px 0;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav ul li {
-  flex: 1;
-  text-align: center;
-}
-
-.main-nav ul li a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25rem;
-  padding: 10px 0;
-}
-
-.main-nav ul li a:hover {
-  background-color: #444;
-}
-
-.banner {
-  height: 400px;
-  object-fit: cover;
-}
-
-.main-content {
-  padding: 2rem 0;
-}
-
-.owner {
-  padding: 2rem 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.contact-section form {
-  padding: 2rem 0;
-}
-
-.contact-section label {
-  display: block;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-section input[type="text"],
-.contact-section input[type="email"],
-.contact-section textarea {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  font-size: 1.25rem;
-}
-
-.contact-section textarea {
-  min-height: 150px;
-  max-height: 150px;
-  height: 150px;
-  resize: none;
-}
-
-.contact-section button {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.25rem;
-  color: #fff;
-  background-color: #333;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-section button:hover {
-  background-color: #444;
-}
-
-.site-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  padding: 1rem;
-  background-color: #fff;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-size: 1.25rem;
-  z-index: 100;
-}
-
-@media (min-width: 48em) {
-  .main-nav ul li {
-    flex: 1 0 200px;
-  }
-}
-
-@media (min-width: 75em) {
-  .main-nav ul li {
-    flex: 1 0 250px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="site-header">
+    <h1>Groove Avenue Studios</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Bookings</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content" role="main" id="main-content">
+    <h1>Welcome to Groove Avenue</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+    <section class="owner">
+      <h1>Meet the Founder</h1>
+      <ul>
+        <li>Name: Jane Smith</li>
+        <li>Title: Founder & CEO</li>
+        <li>Email: jane@grooveavenue.com</li>
+        <li>Phone: 555-123-4567</li>
+      </ul>
+      <h1>Address</h1>
+      <p>
+        Groove Avenue Studios
+        456 Rhythm Street,
+        Melodytown, Beatland
+        B2S 1M1
+      </p>
+    </section>
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <form action="thanks.html">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Full Name" aria-label="Full Name" required>
+        <label for="emailAddress">Email Address</label>
+        <input type="email" id="emailAddress" placeholder="Email Address" aria-label="Email Address" required>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Subject" aria-label="Subject" required>
+        <label for="message">Your Message</label>
+        <textarea id="message" aria-label="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    &copy; 2024 Groove Avenue Studios
+  </footer>
+</body>
+</html>
+-
